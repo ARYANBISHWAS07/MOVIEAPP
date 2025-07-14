@@ -32,7 +32,7 @@ const Search = () => {
       
       if (data?.length > 0) {
         try {
-          await axios.post(" https://b4bb-2409-40d2-4b-f80-e087-a9c2-6f67-ad51.ngrok-free.app/api/movieData", {
+          await axios.post("http://localhost:3000/api/movieData", {
             searchTerm: query,
             movie: data[0], 
           });

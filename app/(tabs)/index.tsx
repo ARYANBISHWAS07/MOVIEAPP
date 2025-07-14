@@ -21,7 +21,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import MaskedView from "@react-native-masked-view/masked-view";
 const TRENDING_STORAGE_KEY = "trendingMovies";
 const TRENDING_API_URL =
-  " https://b4bb-2409-40d2-4b-f80-e087-a9c2-6f67-ad51.ngrok-free.app/api/trendingMovieData";
+  "http://localhost:3000/api/trendingMovieData";
 
 export default function Index() {
   const router = useRouter();
@@ -142,7 +142,7 @@ export default function Index() {
           </Text>
         ) : (
           <View className="flex-1 mt-5">
-            <SearchBar
+            <SearchBar  
               onPress={() => router.push("/search")}
               placeholder="Search for a movie"
             />
